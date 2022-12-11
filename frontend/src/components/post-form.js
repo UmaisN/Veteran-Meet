@@ -114,8 +114,8 @@ const previewFile = (file) =>
 
      
      
-         const paperStyle = {padding : 20, height: '70vh', width: 450,
-                             margin: '180px 10px 200px 240px'}
+         const paperStyle = {padding : 20, height: '40vh', width: 700,
+    margin: '150px 0px 50px 240px'}
          const avatarStyle = {backgroundColor: '#4169e1'}
          const btStyle = {margin: '30px 0px 12px'}
          const textStyle = {margin: '3px 0'}
@@ -124,7 +124,6 @@ const previewFile = (file) =>
             <Grid>
             <Paper elevation={10} style={paperStyle}>
                     <Grid align='center'>
-                        <Avatar style={avatarStyle}><LockOutlinedIcon/></Avatar>
                         <h2>Add Post</h2>
                     </Grid>   
 
@@ -132,7 +131,7 @@ const previewFile = (file) =>
                         aria-label="minimum height"
                         minRows={5}
                         placeholder="Minimum 5 rows"
-                        style={{ width: 400 }}    
+                        style={{ width: 700 }}    
                         onChange={e => setComment(e.target.value)}
                     />  
                    

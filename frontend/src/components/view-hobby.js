@@ -10,7 +10,7 @@ import { renderMatches, useNavigate, useParams} from "react-router-dom";
 
 import { TabContext } from "@mui/lab";
 import { ClassNames } from "@emotion/react";
-
+import Divider from '@mui/material/Divider';
 
 
 const ViewHobby = ()=>
@@ -39,8 +39,8 @@ const ViewHobby = ()=>
             console.log(err) })
     },[hobbies]);
    
-    const paperStyle = {padding : 20, height: '50vh', width: 650,
-    margin: '180px 10px 200px 240px'}
+    const paperStyle = {padding : 20, height: '400vh', width: 900,
+    margin: '80px 0px 50px 240px'}
 const avatarStyle = {backgroundColor: '#4169e1'}
 const btStyle = {margin: '30px 0px 12px'}
 const textStyle = {margin: '3px 0'}
@@ -48,14 +48,14 @@ const textStyle = {margin: '3px 0'}
        <Grid>
          <Paper elevation={15} style={paperStyle}>
                     <Grid align='center'>
-                        <Avatar style={avatarStyle}><LockOutlinedIcon/></Avatar>
                         <h2>View Hobbies</h2>
                     </Grid>  
         
                     {hobbies.map((hobby)=>
                         (
                       <>
-                       <TextField
+                      <Typography sx={{ fontWeight: 400, margin:2  }} variant="h6">
+              Name: <TextField
                     type='text' 
                      defaultValue={hobby.name}
                      variant='outlined'
@@ -63,23 +63,33 @@ const textStyle = {margin: '3px 0'}
                      inputProps = {
                      { readOnly: true,}
                      }/>
-                    <TextField
+                      </Typography>
+                       
+                      <Typography sx={{ fontWeight: 400, margin:2  }} variant="h6">
+              Hobby: <TextField
                     type='text' 
                      defaultValue={hobby.hobby}
                      variant='outlined'
                      inputProps = {
                      { readOnly: true,}
                      }/>
-                      <TextField
+                      </Typography>
+                    
+                      <Typography sx={{ fontWeight: 400, margin:2 }} variant="h6">
+              Category: <TextField
                     type='text' 
                      defaultValue={hobby.category}
                      variant='outlined'
                      inputProps = {
                      { readOnly: true,}
                      }/>
-                     <EditIcon sx={{fontSize:40 }} onClick={()=>handleSubmit(hobby._id)}>
-
-                     </EditIcon>
+                      </Typography>
+                      
+                      <Grid align='center'>
+                        <EditIcon sx={{fontSize:40 }} onClick={()=>handleSubmit(hobby._id)}></EditIcon>
+                      </Grid>
+                     
+                     <Divider sx={{ borderBottomWidth: 5, margin: 2}}></Divider>
                      
     
                    {/* <Button   type='submit' onClick={()=>handleSubmit()} variant="contained" style={btStyle} color='primary' fullWidth>EDIT HOBBY</Button>  */}

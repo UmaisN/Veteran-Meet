@@ -74,7 +74,7 @@ const EditHobby = () =>
       })
            
   }
-  const paperStyle = {padding : 20, height: '40vh', width: 650, margin: '180px 10px 200px 240px'}
+  const paperStyle = {padding : 20, height: '50vh', width: 650, margin: '140px 10px 200px 240px'}
          const avatarStyle = {backgroundColor: '#4169e1'}
          const btStyle = {margin: '30px 0px 12px'}
          const textStyle = {margin: '3px 0'}
@@ -83,13 +83,14 @@ const EditHobby = () =>
             <Grid>
             <Paper elevation={15} style={paperStyle}>
                     <Grid align='center'>
-                        <Avatar style={avatarStyle}><LockOutlinedIcon/></Avatar>
                         <h2>Edit Hobby</h2>
                     </Grid>
                     {/* {hobbies.map((hobby)=>
                         (
                       <> */}
-                    <TextField
+
+                    <Typography sx={{ fontWeight: 400, margin: 2 }} variant="h6">
+              Name: <TextField
                     type='text' 
                     //{hobby.name}
                     defaultValue={name}
@@ -97,8 +98,11 @@ const EditHobby = () =>
                      variant='outlined'
                      inputProps = {
                      { readOnly: false,}
-                     }/>     
-                    <TextField
+                     }/>   
+                      </Typography>
+
+                      <Typography sx={{ fontWeight: 400,margin: 2 }} variant="h6">
+              Hobby: <TextField
                     type='text' 
                     onChange={e=>setHobby(e.target.value)}
                      defaultValue={hobby}
@@ -106,7 +110,10 @@ const EditHobby = () =>
                      inputProps = {
                      { readOnly: false,}
                      }/>
-                      <TextField
+                      </Typography>
+
+                      <Typography sx={{ fontWeight: 400,margin: 2 }} variant="h6">
+              Category: <TextField
                     type='text' 
                     
                     onChange={e=>setCategory(e.target.value)}
@@ -115,9 +122,13 @@ const EditHobby = () =>
                      inputProps = {
                      { readOnly: false,}
                      }/> 
-                     <UpdateIcon sx={{fontSize: 40}} onClick={EditHobbies}>
-
-                     </UpdateIcon>
+                      </Typography>
+                      
+                    
+                      <Grid align='center'>
+                        <UpdateIcon sx={{fontSize: 40}} onClick={EditHobbies}></UpdateIcon>     
+                      </Grid>
+                     
                     
                   
                     

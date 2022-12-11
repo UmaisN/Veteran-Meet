@@ -25,13 +25,17 @@ import SDrawerC from '../src/components/SDrawerC';
 import ViewProfileComm from './components/view-profilec';
 import AddEvent from './components/add-event';
 import ViewEvents from './components/view-events'
+/*
+<Route index element = {<MainScreen/>}/>
+<Route path="vsignup" element={<SignUpForm/>} />
+<Route path="vlogin" element={<LoginForm/>} />
+<Route path="csignup" element={<SignInCommunity/>}/>
+    <Route path="clogin" element={<LoginCommunity/>} />
+*/
 function App() {
   return (
     <Router>
     <Routes>
-    <Route index element = {<MainScreen/>}/>
-    <Route path="vsignup" element={<SignUpForm/>} />
-    <Route path="vlogin" element={<LoginForm/>} />
     <Route path="home" element={[<NavBar/>, <SDrawerV/>]} />
     <Route path="home/viewprofile" element={[<NavBar/> , <SDrawerV/>,<ViewProfile/>]} />
     <Route path="home/addpost" element= {[<NavBar/>, <SDrawerV/>,<AddPost/>]} />
@@ -42,9 +46,8 @@ function App() {
     <Route path="home/viewevents" element={[<NavBar/> ,<SDrawerV/>, <ViewEventsV/>]}/>
      <Route path="home/followv" element={[<NavBar/> ,<SDrawerV/>, <FollowV/>]}/>
 
-    <Route path="csignup" element={<SignInCommunity/>}/>
-    <Route path="clogin" element={<LoginCommunity/>} />
-    <Route path="chome" element={[<NavBar/>, <SDrawerC/>]}/>
+    
+    <Route index element={[<NavBar/>, <SDrawerC/>]}/>
     <Route path="chome/profile" element={[<NavBar/> , <SDrawerC/>,<ViewProfileComm/>]} />
     <Route path="chome/addevent" element={[<NavBar />, <SDrawerC/> ,<AddEvent/>]} />
     <Route path="chome/viewevents" element={[<NavBar />, <SDrawerC/> ,<ViewEvents/>]} />

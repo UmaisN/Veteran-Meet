@@ -1,0 +1,18 @@
+
+body{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    place-items: center;
+    background: -webkit-linear-gradient(left, #a445b2, #4169e1);
+  }
+
+/* unvisited link */
+a:link {
+    color: #4169e1;
+}
+   
+  /* mouse over link */
+  a:hover {
+    color: #002698;
+  }

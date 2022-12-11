@@ -2,7 +2,7 @@ import { Avatar, Grid,Paper,TextareaAutosize, TextField, FormControlLabel, Check
 import React, {useEffect, useState} from "react";
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import axios from "axios";
-
+import Divider from '@mui/material/Divider';
 
 const ViewPosts =() =>
 
@@ -24,8 +24,8 @@ const ViewPosts =() =>
           console.log(err) })
   },[events]);
 
-  const paperStyle = {padding : 20, height: '50vh', width: 450,
-  margin: '180px 10px 200px 240px'}
+  const paperStyle = {padding : 20, height: '300vh', width: 700,
+  margin: '100px 10px 200px 240px'}
 const avatarStyle = {backgroundColor: '#4169e1'}
 const btStyle = {margin: '30px 0px 12px'}
 const textStyle = {margin: '3px 0'}
@@ -33,12 +33,12 @@ const textStyle = {margin: '3px 0'}
       <Grid>
        <Paper elevation={15} style={paperStyle}>
                   <Grid align='center'>
-                      <Avatar style={avatarStyle}><LockOutlinedIcon/></Avatar>
-                      <h2>View Posts</h2>
+                      <h2>View Events</h2>
                   </Grid>  
                   {[...events].reverse().map((event)=>
                         (
 <>
+<Grid align='center'>
 <Typography sx={{ fontWeight: 400 }} variant="h6">
                    Organization Name:   {event.orgname}   
                   </Typography>  
@@ -59,7 +59,8 @@ const textStyle = {margin: '3px 0'}
                   value={event.stars}
                   readOnly
                   />
-                
+                </Grid>
+                <Divider sx={{ borderBottomWidth: 5, margin: 2}}></Divider>
                             
                  
              

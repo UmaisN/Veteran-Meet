@@ -105,7 +105,7 @@ const ViewVeteran = ()=>
     }
 
     const paperStyle = {padding : 20, height: '50vh', width: 450,
-    margin: '180px 10px 200px 240px'}
+    margin: '120px 10px 200px 240px'}
 const avatarStyle = {backgroundColor: '#4169e1'}
 const btStyle = {margin: '30px 0px 12px'}
 const textStyle = {margin: '3px 0'}

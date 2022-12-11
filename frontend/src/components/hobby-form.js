@@ -38,9 +38,9 @@ const FormHobby = ()=>
          }
      
      
-         const paperStyle = {padding : 20, height: '60vh', width: 450,
-                             margin: '180px 10px 200px 240px'}
-         const avatarStyle = {backgroundColor: '#4169e1'}
+         const paperStyle = {padding : 20, height: '50vh', width: 600,
+                             margin: '150px 10px 200px 240px'}
+         const avatarStyle = {backgroundColor: '#D6E4E5'}
          const btStyle = {margin: '30px 0px 12px'}
          const textStyle = {margin: '3px 0'}
     return (
@@ -48,7 +48,6 @@ const FormHobby = ()=>
             <Grid>
             <Paper elevation={15} style={paperStyle}>
                     <Grid align='center'>
-                        <Avatar style={avatarStyle}><LockOutlinedIcon/></Avatar>
                         <h2>Add Hobby</h2>
                     </Grid> 
                     <TextField 

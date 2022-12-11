@@ -12,8 +12,9 @@ import {
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
-import "../style/loginform.css";
+import "../style/allpages.css";
 import axios from "axios";
+import Divider from '@mui/material/Divider';
 
 const ViewPosts = () => {
   const [name, setName] = useState("");
@@ -32,13 +33,8 @@ const ViewPosts = () => {
       });
   }, [posts]);
 
-  const paperStyle = {
-    padding: 10,
-    height: 500,
-    width: 600,
-    margin: "50px 50px 0px 80px"
-  };
-  const avatarStyle = { backgroundColor: "#4169e1" };
+  const paperStyle = {padding : 20, height: '400vh', width: 900,
+    margin: '80px 0px 50px 240px'}
   const btStyle = { margin: "30px 0px 12px" };
   const textStyle = { margin: "3px 0" };
   return (
@@ -65,6 +61,7 @@ const ViewPosts = () => {
                 borderRadous: "50%"
               }}
             />
+            <Divider sx={{ borderBottomWidth: 5, margin: 2}}></Divider>
           </>
         ))}
       </Paper>

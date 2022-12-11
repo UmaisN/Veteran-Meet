@@ -101,10 +101,10 @@ import {
     }
 
     const paperStyle = {
-      padding: 10,
-      height: '40vh',
-      width: 550,
-      margin: "180px 10px 200px 240px"
+      padding: 20,
+      height: '300vh',
+      width: 700,
+      margin: "100px 10px 200px 240px"
     };
     const avatarStyle = { backgroundColor: "#4169e1" };
     const btStyle = { margin: "30px 0px 12px" };

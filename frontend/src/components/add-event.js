@@ -55,7 +55,7 @@ const FormHobby = () => {
     padding: 15,
     height: "600",
     width: 500,
-    margin: "50px 50px 0px 80px"
+    margin: "100px 50px 200px 240px"
   };
   const avatarStyle = { backgroundColor: "#4169e1" };
   const btStyle = { margin: "30px 0px 12px" };
